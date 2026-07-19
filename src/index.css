@@ -1,0 +1,88 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand-bg: #051424;
+  --color-brand-cyan: #00e1ab;
+  --color-brand-cyan-bright: #36ffc4;
+  --color-brand-surface: #122131;
+  --color-brand-surface-low: #0d1c2d;
+  --color-brand-surface-lowest: #010f1f;
+  --color-brand-surface-high: #1c2b3c;
+  --color-brand-surface-highest: #273647;
+  --color-brand-text: #d4e4fa;
+  --color-brand-text-sub: #c1c6da;
+  --color-brand-outline: #3a4a43;
+  --color-brand-red: #ffb4ab;
+  --color-brand-red-bg: #93000a;
+
+  --font-display: "Anybody", sans-serif;
+  --font-sans: "Hanken Grotesk", sans-serif;
+  --font-mono: "JetBrains Mono", monospace;
+}
+
+/* Custom styles and animations */
+@layer utilities {
+  .font-display {
+    font-family: var(--font-display);
+  }
+  .font-mono {
+    font-family: var(--font-mono);
+  }
+}
+
+@keyframes pulse-glow {
+  0%, 100% { 
+    opacity: 0.6; 
+    box-shadow: 0 0 8px rgba(0, 225, 171, 0.4); 
+  }
+  50% { 
+    opacity: 1; 
+    box-shadow: 0 0 20px rgba(0, 225, 171, 0.8); 
+  }
+}
+
+.pulse-dot {
+  animation: pulse-glow 1.5s infinite;
+}
+
+@keyframes scroll {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+.ticker-scroll {
+  display: flex;
+  width: fit-content;
+  animation: scroll 35s linear infinite;
+}
+
+.glass-card {
+  background: rgba(18, 33, 49, 0.65);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(58, 74, 67, 0.4);
+}
+
+.glass-panel {
+  background: rgba(18, 33, 49, 0.75);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(58, 74, 67, 0.5);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #051424;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1c2b3c;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #00e1ab;
+}

@@ -1,0 +1,6 @@
+{
+  "name": "STADIUM_CORE",
+  "description": "Smart Arena OS platform containing live tournament brackets, seat finder AR-mapping, real-time stadium layout updates, and zero-queue logistics dashboard.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
